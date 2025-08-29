@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Aug 23, 2025 at 08:41 PM
+-- Generation Time: Aug 29, 2025 at 09:14 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -20,6 +20,8 @@ SET time_zone = "+00:00";
 --
 -- Database: `house_rent_db`
 --
+CREATE DATABASE IF NOT EXISTS `house_rent_db` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+USE `house_rent_db`;
 
 -- --------------------------------------------------------
 
