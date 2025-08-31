@@ -47,12 +47,12 @@ CREATE TABLE `houses` (
 --
 
 INSERT INTO `houses` (`id`, `photo`, `location`, `bedrooms`, `garden`, `garage`, `price`, `discount`, `owner_id`, `status`) VALUES
-(1, 'images/house1.jpg', 'Colombo', 3, 1, 1, 250000.00, 5.00, 2, 'available'),
-(2, 'images/house2.jpg', 'Kandy', 4, 1, 0, 180000.00, 0.00, 3, 'available'),
-(3, 'images/house3.jpg', 'Galle', 2, 0, 1, 120000.00, 10.00, 2, 'sold'),
-(4, 'images/house4.jpg', 'Kelaniya', 3, 1, 0, 232000.00, 5.00, 2, 'available'),
-(5, 'images/house5.jpg', 'Jaffna', 2, 0, 1, 170000.00, 0.00, 2, 'available'),
-(6, 'images/house6.jpg', 'Gampaha', 1, 0, 1, 190000.00, 10.00, 5, 'sold');
+(1, 'images/house1.png', 'Colombo', 3, 1, 1, 250000.00, 5.00, 2, 'available'),
+(2, 'images/house2.png', 'Kandy', 4, 1, 0, 180000.00, 0.00, 3, 'available'),
+(3, 'images/house3.png', 'Galle', 2, 0, 1, 120000.00, 10.00, 2, 'sold'),
+(4, 'images/house4.png', 'Kelaniya', 3, 1, 0, 232000.00, 5.00, 2, 'available'),
+(5, 'images/house5.png', 'Jaffna', 2, 0, 1, 170000.00, 0.00, 2, 'available'),
+(6, 'images/house6.png', 'Gampaha', 1, 0, 1, 190000.00, 10.00, 5, 'sold');
 
 -- --------------------------------------------------------
 

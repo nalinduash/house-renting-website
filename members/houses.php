@@ -13,7 +13,7 @@ $houses = $stmt->fetchAll();
 <div style="display:flex; flex-wrap:wrap; gap:20px;">
     <?php foreach ($houses as $house): ?>
         <div style="border:1px solid #ccc; padding:10px; width:250px;">
-            <img src="../images/houses/<?php echo $house['photo']; ?>" alt="House Image" style="width:100%; height:150px; object-fit:cover;">
+            <img src="../<?php echo $house['photo']; ?>" alt="House Image" style="width:100%; height:150px; object-fit:cover;">
             <p><b>Location:</b> <?php echo htmlspecialchars($house['location']); ?></p>
             <p><b>Bedrooms:</b> <?php echo $house['bedrooms']; ?></p>
             <p><b>Price:</b> $<?php echo number_format($house['price'], 2); ?></p>
