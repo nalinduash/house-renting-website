@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Aug 23, 2025 at 08:41 PM
+-- Generation Time: Aug 30, 2025 at 04:27 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -20,6 +20,8 @@ SET time_zone = "+00:00";
 --
 -- Database: `house_rent_db`
 --
+CREATE DATABASE IF NOT EXISTS `house_rent_db` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+USE `house_rent_db`;
 
 -- --------------------------------------------------------
 
@@ -93,12 +95,12 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `username`, `password`, `email`, `role`) VALUES
-(1, 'nalindu', 'nalindu', 'nalindugra@gmail.com', 'member'),
-(2, 'ushani', 'ushani', 'saubhagyaushani03@gmail.com', 'manager'),
-(3, 'imesh', 'imesh', 'imeshnbandara826@gmail.com', 'member'),
-(4, 'rukshan', 'rukshan', 'maleesharukshan19@gmail.com', 'admin'),
-(5, 'kavindu', 'kavindu', 'kavindu@gmail.com', 'member'),
-(6, 'kasun', 'kasun', 'kasun20@gmail.com', 'member');
+(1, 'nalindu', '$2y$10$A67I7hf96zGg95h5WE2dUe/aVcK.yeVYkB9YIzCrBAYxQjWMm6tA.', 'nalindugra@gmail.com', 'member'),
+(2, 'ushani', '$2y$10$u/sIULy8m0H7YnWW8LysmOZjEBFf.7TFG1N66aQ4lHQZUbhRd6t6q', 'saubhagyaushani03@gmail.com', 'manager'),
+(3, 'imesh', '$2y$10$FsVXyItNQIdolgumujIJA.bnpIZn2LzHgVwD2fkgoWDLKtPKJloxq', 'imeshnbandara826@gmail.com', 'member'),
+(4, 'rukshan', '$2y$10$yyU4NmCwvS0ozUKAep8YnOUSLFXAYzRL3eRfCC2eopOOZsRVPABiO', 'maleesharukshan19@gmail.com', 'admin'),
+(5, 'kavindu', '$2y$10$A1/TmHSQy7tRIFvgyMf3MOmVje5HuXKZSw5v81SWJHMOxvjPFOs6C', 'kavindu@gmail.com', 'member'),
+(6, 'kasun', '$2y$10$oObwgO2tR0qWmg1y8ddaaOdjXHCUcl1k349suV6G8NHaBFo1XNLri', 'kasun20@gmail.com', 'member');
 
 --
 -- Indexes for dumped tables
