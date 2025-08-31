@@ -3,6 +3,7 @@ require_once "../includes/auth_check.php";
 requireRole("member"); // Only members can buy
 
 require_once "../config/connectdb.php";
+require_once "../includes/header.php";
 
 $message = "";
 
@@ -66,3 +67,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["house_id"])) {
     <a href="houses.php">⬅ Back to Houses</a>
 </body>
 </html>
+<?php require_once "../includes/footer.php"; ?>

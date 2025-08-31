@@ -3,6 +3,7 @@ require_once "../includes/auth_check.php";
 requireRole("admin"); // Only admin can access
 
 require_once "../config/connectdb.php";
+require_once "../includes/header.php";
 
 $message = "";
 
@@ -71,3 +72,4 @@ $houses = $stmt->fetchAll();
     <a href="admin_dashboard.php">⬅ Back to Dashboard</a>
 </body>
 </html>
+<?php require_once "../includes/footer.php"; ?>

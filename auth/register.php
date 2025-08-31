@@ -1,5 +1,6 @@
 <?php
 require_once "../config/connectdb.php";
+require_once "../includes/header.php";
 
 $message = "";
 
@@ -59,3 +60,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <a href="login.php">Already have an account? Login</a>
 </body>
 </html>
+<?php require_once "../includes/footer.php"; ?>

@@ -1,12 +1,7 @@
 <?php
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
-?>
-
-<?php
 session_start();
 require_once "../config/connectdb.php"; // DB connection
+require_once "../includes/header.php";
 
 $message = ""; // To store error messages
 
@@ -65,3 +60,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </form>
 </body>
 </html>
+<?php require_once "../includes/footer.php"; ?>
