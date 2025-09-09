@@ -7,28 +7,40 @@ require_once "../includes/header.php";
 $message = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $location = $_POST["location"];
+    $location = trim($_POST["location"]);
     $bedrooms = (int) $_POST["bedrooms"];
     $price = (float) $_POST["price"];
     $garden = isset($_POST["garden"]) ? 1 : 0;
     $garage = isset($_POST["garage"]) ? 1 : 0;
 
-    // For simplicity, we just store image filename (upload feature can be added later)
-    $photo = $_POST["photo"];  
+    $file = $_FILES["photo"];
 
-    $stmt = $conn->prepare("INSERT INTO houses (photo, location, bedrooms, garden, garage, price, discount, owner_id, status) 
-                            VALUES (:photo, :location, :bedrooms, :garden, :garage, :price, 0, :owner_id, 'available')");
-    $stmt->execute([
-        ":photo" => $photo,
-        ":location" => $location,
-        ":bedrooms" => $bedrooms,
-        ":garden" => $garden,
-        ":garage" => $garage,
-        ":price" => $price,
-        ":owner_id" => $_SESSION["user_id"]
-    ]);
+    if (!isset($file) || $file['error'] !== UPLOAD_ERR_OK) {
+        $message = "Upload failed (error code: " . ($file['error'] ?? 'none') . ").";
+    } else {
+        $ext = strtolower(pathinfo($file["name"], PATHINFO_EXTENSION));
+        $newName = uniqid() . "." . $ext;
+        $folder  = __DIR__ . "/../images/";
+        $dest = $folder . $newName;
+        
+        move_uploaded_file($file["tmp_name"], $dest);
+                        
+        $photoPath = "images/" . $newName;
+                        
+        $stmt = $conn->prepare("INSERT INTO houses (photo, location, bedrooms, garden, garage, price, discount, owner_id, status) 
+                                VALUES (:photo, :location, :bedrooms, :garden, :garage, :price, 0, :owner_id, 'available')");
+        $stmt->execute([
+                            ":photo" => $photoPath,
+                            ":location" => $location,
+                            ":bedrooms" => $bedrooms,
+                            ":garden" => $garden,
+                            ":garage" => $garage,
+                            ":price" => $price,
+                            ":owner_id" => $_SESSION["user_id"]
+                        ]);
 
-    $message = "House added successfully!";
+        $message = "House added successfully!";
+    }
 }
 ?>
 
@@ -38,9 +50,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <p style="color:green;"><?php echo $message; ?></p>
 <?php endif; ?>
 
-<form method="POST" action="">
-    <label>Photo Filename:</label><br>
-    <input type="text" name="photo" required><br><br>
+<form method="POST" action="" enctype="multipart/form-data">
+    <label>Picture:</label><br>
+    <input type="file" name="photo" accept=".jpg,.jpeg,.png" required><br><br>
 
     <label>Location:</label><br>
     <input type="text" name="location" required><br><br>

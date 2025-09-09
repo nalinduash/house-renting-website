@@ -9,7 +9,9 @@ if (session_status() === PHP_SESSION_NONE) {
 <head>
     <meta charset="UTF-8">
     <title>House Renting Website</title>
-    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="../assets/css/header.css">
+    <link rel="stylesheet" href="../assets/css/footer.css">
 </head>
 <body>
     <header>
@@ -37,5 +39,6 @@ if (session_status() === PHP_SESSION_NONE) {
                 <?php endif; ?>
             </ul>
         </nav>
+        <h1 class="nav-expander" hidden>☰</h1>
     </header>
     <main>

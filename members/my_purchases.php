@@ -21,15 +21,17 @@ $purchases = $stmt->fetchAll();
 <?php if (count($purchases) > 0): ?>
     <div style="display:flex; flex-wrap:wrap; gap:20px;">
         <?php foreach ($purchases as $p): ?>
-            <div style="border:1px solid #ccc; padding:10px; width:250px;">
-                <img src="../images/houses/<?php echo $p['photo']; ?>" 
+            <div class="card">
+                <img src="../<?php echo $p['photo']; ?>" 
                      alt="House Image" 
                      style="width:100%; height:150px; object-fit:cover;">
                 <p><b>Location:</b> <?php echo htmlspecialchars($p['location']); ?></p>
                 <p><b>Bedrooms:</b> <?php echo $p['bedrooms']; ?></p>
+                <p><b>Garden:</b> <?php echo $house['garden'] ? 'Yes' : 'No'; ?></p>
+                <p><b>Garage:</b> <?php echo $house['garage'] ? 'Yes' : 'No'; ?></p>
                 <p><b>Original Price:</b> $<?php echo number_format($p['price'], 2); ?></p>
                 <p><b>Price Paid:</b> $<?php echo number_format($p['price_paid'], 2); ?></p>
-                <p><b>Purchased On:</b> <?php echo $p['date']; ?></p>
+                <p><b>Purchased On:</b> <?php echo date('Y-m-d', strtotime($p['date'])); ?></p>
             </div>
         <?php endforeach; ?>
     </div>
