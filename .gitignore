@@ -1,0 +1,11 @@
+# .gitignore
+vendor/
+.env
+config/stripe.php
+/stripe-keys.php
+/stripe-config.php
+*.env
+.env.local
+.env.production
+.DS_Store
+.htaccess

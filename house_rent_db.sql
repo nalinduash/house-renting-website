@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Aug 30, 2025 at 04:27 PM
+-- Generation Time: Sep 10, 2025 at 09:46 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -65,16 +65,17 @@ CREATE TABLE `transactions` (
   `house_id` int(11) DEFAULT NULL,
   `buyer_id` int(11) DEFAULT NULL,
   `price_paid` decimal(10,2) DEFAULT NULL,
-  `date` datetime DEFAULT current_timestamp()
+  `date` datetime DEFAULT current_timestamp(),
+  `stripe_payment_id` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `transactions`
 --
 
-INSERT INTO `transactions` (`id`, `house_id`, `buyer_id`, `price_paid`, `date`) VALUES
-(1, 3, 1, 108000.00, '2025-08-24 00:10:03'),
-(2, 6, 3, 171000.00, '2025-08-24 00:10:03');
+INSERT INTO `transactions` (`id`, `house_id`, `buyer_id`, `price_paid`, `date`, `stripe_payment_id`) VALUES
+(1, 3, 1, 108000.00, '2025-08-24 00:10:03', NULL),
+(2, 6, 3, 171000.00, '2025-08-24 00:10:03', NULL);
 
 -- --------------------------------------------------------
 

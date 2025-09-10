@@ -135,10 +135,9 @@ $locations = $conn->query("SELECT DISTINCT location FROM houses WHERE status='av
                 <?php else: ?>
                     <p><b>Discount:</b> None</p>
                 <?php endif; ?>
-                <form method="POST" action="buy.php">
-                    <input type="hidden" name="house_id" value="<?php echo $house['id']; ?>">
-                    <button type="submit">Buy Now</button>
-                </form>
+                <a href="create-payment.php?house_id=<?php echo $house['id']; ?>" class="home-button">
+                    Buy Now with Stripe
+                </a>
             </div>
         <?php endforeach; ?>
     </div>
