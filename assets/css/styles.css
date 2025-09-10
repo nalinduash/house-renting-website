@@ -129,7 +129,7 @@ th {
 }
 
 tr:hover {
-    background-color: #e9f7fe;
+    border: 2px solid #3498db;
 }
 
 /* Messages */
@@ -184,6 +184,7 @@ li {
     height: 200px;
     margin-bottom: 15px;
     object-fit: cover;
+    border-radius: 10px;
 }
 
 .card p {
@@ -203,4 +204,64 @@ li {
     table {
         font-size: 0.9rem;
     }
+}
+
+/* Homes and Dashboard */
+.stats-container{
+    display: flex; 
+    gap: 20px; 
+    margin-bottom: 30px;
+}
+
+.stat-card{
+    background: #2c3e50; 
+    color: white; 
+    padding: 20px; 
+    border-radius: 8px; 
+    flex: 1; 
+    text-align: center;
+}
+
+.quick-actions{
+    margin-bottom: 30px;
+}
+
+.home-button{
+    display: inline-block; 
+    background: #3498db; 
+    color: white; 
+    padding: 8px 15px; 
+    border-radius: 4px; 
+    text-decoration: none; 
+    margin-top: 10px;
+}
+
+.recent-activity-card{
+    background: white; 
+    padding: 20px; 
+    border-radius: 8px; 
+    border: 1px solid #ddd;
+}
+
+/* Houses */
+.filter-sectio{
+    background: white; 
+    padding: 20px; 
+    border-radius: 8px; 
+    margin-bottom: 20px; 
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.filter-container{
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+    gap: 15px;
+}
+
+.gray-button{
+    background-color: #95a5a6; 
+    padding: 0.75rem 1.5rem; 
+    border-radius: 4px; 
+    color: white; 
+    text-decoration: none;
 }
