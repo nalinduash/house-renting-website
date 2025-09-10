@@ -45,6 +45,9 @@ $available_houses = $conn->query("SELECT COUNT(*) FROM houses WHERE status='avai
             <a href="discounts.php" class="stat-card">
                 💰 Manage Discounts
             </a>
+            <a href="manage_houses.php" class="stat-card">
+                🏠 Manage Houses
+            </a>
             <a href="reports.php" class="stat-card">
                 📊 View Reports
             </a>

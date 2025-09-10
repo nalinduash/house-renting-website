@@ -260,8 +260,24 @@ li {
 
 .gray-button{
     background-color: #95a5a6; 
-    padding: 0.75rem 1.5rem; 
+    padding: 8px 15px; 
+    margin-top: 10px;
     border-radius: 4px; 
     color: white; 
     text-decoration: none;
+}
+
+/* Manage houses */
+.house-image-small { 
+    width: 80px; 
+    height: 60px; 
+    object-fit: cover; 
+    border-radius: 4px;
+}
+
+.house-image-medium { 
+    width: 200px; 
+    height: 130px; 
+    object-fit: cover; 
+    border-radius: 4px;
 }

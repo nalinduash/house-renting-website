@@ -29,6 +29,7 @@ if (session_status() === PHP_SESSION_NONE) {
                     <?php elseif ($_SESSION["role"] === "admin"): ?>
                         <li><a href="../admin/admin_dashboard.php">Dashboard</a></li>
                         <li><a href="../admin/users.php">Users</a></li>
+                        <li><a href="../admin/manage_houses.php">Houses</a></li>
                         <li><a href="../admin/discounts.php">Discounts</a></li>
                         <li><a href="../admin/reports.php">Reports</a></li>
                     <?php endif; ?>
