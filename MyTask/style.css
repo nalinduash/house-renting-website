@@ -1,0 +1,182 @@
+/* General Reset */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: hsl(0, 0%, 97%);
+    color: #333;
+    overflow-x: hidden;
+}
+
+/* Header */
+.header {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    z-index: 1000;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 1rem;
+    background: black;
+    box-sizing: border-box;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    height: 50px;
+    border-radius: 25px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+}
+
+.nav-links a:hover {
+    color: #009688;
+}
+
+.menuIcon {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .menuIcon {
+        display: block;
+        cursor: pointer;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: black;
+        flex-direction: column;
+        display: none;
+        width: 200px;
+        padding: 10px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+}
+
+/* Hero / Home Section */
+.container {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.img-container {
+    width: 100%;
+    display: flex;
+    animation: slide 12s infinite alternate;
+}
+
+.img-container img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    object-position: center;
+}
+
+@keyframes slide {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-25%);
+    }
+    50% {
+        transform: translateX(-50%);
+    }
+    75% {
+        transform: translateX(-75%);
+    }
+}
+
+.content {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: white;
+    font-family: cursive;
+    padding: 0 1rem;
+}
+
+.content h1 {
+    font-size: 60px;
+    margin-top: 80px;
+}
+
+/* Buttons */
+button {
+    width: 200px;
+    padding: 15px 0;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    background: transparent;
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    border: 2px solid #009688;
+}
+
+span {
+    background: #009688;
+    height: 100%;
+    width: 0;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    border-radius: 25px;
+    z-index: -1;
+    transition: 0.5s;
+}
+
+button:hover span {
+    width: 100%;
+}
+
+button:hover {
+    border: none;
+}
+
+/* About Section */
+.about {
+    padding: 4rem;
+    background: transparent;
+    text-align: center;
+    max-width: 800px;
+    margin: 2rem auto;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 10px;
+}
+
+.about:hover {
+    transform: translateY(-10px);
+    transition: 0.5s;
+}
