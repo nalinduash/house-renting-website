@@ -65,7 +65,7 @@ try {
     <div style="max-width: 600px; margin: 0 auto; padding: 20px;">
         <h2>Complete Your Purchase</h2>
         
-        <div class="card" style="margin-bottom: 20px;">
+        <div class="card" style="margin-bottom: 20px; margin-left: auto; margin-right: auto;">
             <img src="../<?php echo htmlspecialchars($house['photo']); ?>" alt="House Image">
             <h3>House Details</h3>
             <p><strong>Location:</strong> <?php echo htmlspecialchars($house['location']); ?></p>
