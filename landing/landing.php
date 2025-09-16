@@ -33,10 +33,10 @@ require_once "../includes/header.php";
         <h1>Welcome to House Renting Website</h1>
         <p style="font-size:18px;">Find your dream house with just a few clicks</p>
         <div style="margin-top:20px;">
-            <a href="auth/login.php">
+            <a href="../auth/login.php">
                 <button style="padding:12px 24px; margin-right:10px; font-size:16px;">Login</button>
             </a>
-            <a href="auth/register.php">
+            <a href="../auth/register.php">
                 <button style="padding:12px 24px; font-size:16px;">Register</button>
             </a>
         </div>
