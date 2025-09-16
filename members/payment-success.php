@@ -3,6 +3,7 @@ require_once "../includes/auth_check.php";
 requireRole("member");
 require_once "../config/connectdb.php";
 require_once "../config/stripe.php";
+require_once "../includes/header.php";
 
 if (!isset($_GET['session_id']) || !isset($_GET['house_id'])) {
     header("Location: houses.php");

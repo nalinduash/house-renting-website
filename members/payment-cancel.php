@@ -2,6 +2,7 @@
 require_once "../includes/auth_check.php";
 requireRole("member");
 require_once "../config/connectdb.php";
+require_once "../includes/header.php";
 
 $house_id = isset($_GET['house_id']) ? (int)$_GET['house_id'] : 0;
 ?>
